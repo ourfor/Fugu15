@@ -2,9 +2,9 @@ name: Xcode - Build and Analyze
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "max" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "max" ]
 
 jobs:
   build:
