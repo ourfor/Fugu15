@@ -18,6 +18,13 @@ jobs:
         uses: MOZGIII/install-ldid-action@v1
         with:
           tag: v2.1.5-procursus2
+      - name: Install trustcache
+        run: |
+          curl -sSL \
+            -o "trustcache" \
+          "https://github.com/CRKatri/trustcache/releases/download/v2.0/trustcache_macos_x86_64"
+          chmod +x "trustcache"
+          cp "trustcache" /usr/local/bin/trustcache
       - name: Build
         run: |
           make ipa
